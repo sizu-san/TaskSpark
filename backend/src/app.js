@@ -7,7 +7,7 @@ connectDB();
 const globalerr = require("./middlewares/globalerr");
 const cors = require("cors");
 app.use(cors({ 
-	origin:'http://localhost:5500',
+	origin:'https://task-spark-rho.vercel.app',
 	methods:["GET" , "POST" , "PUT" , "DELETE"],
 	allowedheaders:['Content-Type' , 'Authorization'],
 	credentials:true,

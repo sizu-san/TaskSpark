@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"> 
+	<head> 
+	<title>TaskSpark</title>
+	<link rel='stylesheet' href='../css/dashboard.css'>
+	<link rel="icon" type="image/png" href="../images/logo4.png">
+	</head>
+	<body id='dashboard'> 
+	<header>
+	<nav>
+	<div class='logo'>
+	<img src='../images/logo.png'>
+	<p>TaskSpark</p>
+	</div>
+	<h1>My  Tasks</h1>
+	</nav>
+	</header>	
+	<main> 	
+	<hr>
+	<section id='add-todo'> 
+	<div class='main-content'> 
+	<p>Add New Task</p>
+	<div class='inputs'> 
+		<input type='text' id='title' placeholder='Task title (e.g., Finish project report)'>
+		<input type='text' id='description' placeholder='Description (Finish the project report by 9pm)'>
+		<button id='create-todo'>Create Task</button>
+	</div>
+	</div>
+	</section>	
+	<section id='show-todos'> 
+	<div class='buttons'> 
+	<button id='All-tasks'>All Tasks</button>
+	<button id='completed-btn'>Completed </button>
+	</div>	
+	<div id='message'></div>
+	<div class='todos'></div> 
+	<div class='main-container' hidden> 
+		<button class='save-btn'>Save</button>
+		<input type='checkbox' class='completed'>
+		<div class='text'> 
+		<p id='show-title'>todo title</p>
+		
+		<textarea rows='3' spellcheck='false' readonly class='todo-description'>description</textarea>
+		</div>
+	<div class='icons'> 
+	<img class='edit-btn' src='../images/edit.svg'>
+	<img class='delete-btn' src='../images/delete.svg'>
+	</div>
+	</div>
+	</section>
+	</main>
+	<script type='module'> 
+	import {getalltodos , createTodoUI , deleteTodoUI , editTodoUI} from '../js/ui/dashboard.js';
+	getalltodos();
+	createTodoUI();
+	deleteTodoUI();
+	editTodoUI();
+	</script>
+	</body>
+</html>
+

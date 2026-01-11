@@ -1,4 +1,4 @@
-const base_url = 'http://localhost:3000';
+const base_url = 'https://taskspark-backend.onrender.com';
 
 export async function api(endpoint , options={}){ 
 const token = localStorage.getItem('token');
